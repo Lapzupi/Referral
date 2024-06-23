@@ -48,7 +48,6 @@ public class ReferralCore extends JavaPlugin{
 	}
 	
 	
-	@SuppressWarnings("deprecation")
 	public Player GetPlayer(String name) {
 		Player player = this.getServer().getPlayer(name);
 		if (player != null) {
@@ -59,16 +58,11 @@ public class ReferralCore extends JavaPlugin{
 	}
 	
 	public void UseCommands(List<?> commands, Player player) {
-		for (int i = 0; i < commands.size(); i++) {
-			String command = (String) commands.get(i);
+        for (Object o : commands) {
+            String command = (String) o;
 
-			getServer().getScheduler().runTask(this, new Runnable() {
-				@Override
-				public void run() {
-					getServer().dispatchCommand(getServer().getConsoleSender(), command.replace("<player>", player.getName()));
-				}
-		    });
-		}
+            getServer().getScheduler().runTask(this, () -> getServer().dispatchCommand(getServer().getConsoleSender(), command.replace("<player>", player.getName())));
+        }
 	}
 	
 }

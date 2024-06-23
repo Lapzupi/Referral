@@ -21,7 +21,7 @@ public class CommandBase {
 	}
 	
 	public boolean HasPermission (CommandSender sender, boolean sendmsg) {
-		if (permission == "") {
+		if (permission.equals("")) {
 			return true;
 		}
 		

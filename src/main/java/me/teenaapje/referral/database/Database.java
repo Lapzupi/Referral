@@ -82,7 +82,6 @@ public class Database {
             
             Bukkit.getConsoleSender().sendMessage(ChatColor.GREEN + "Connected to " + core.getConfig().getString("db") + " database");
 
-            return;
         } catch (SQLException ex) {
             core.getLogger().log(Level.SEVERE,"SQLite exception on initialize", ex);
         } catch (ClassNotFoundException ex) {
@@ -112,12 +111,10 @@ public class Database {
 				Bukkit.getConsoleSender().sendMessage(ChatColor.GREEN + "Database Connected to " + core.getConfig().getString("db") + " for: " + core.getDescription().getName());
 			}
 			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} catch (ClassNotFoundException e) {
+		} catch (SQLException | ClassNotFoundException e) {
 			e.printStackTrace();
 		}
-	}
+    }
 	
 	public Connection getConnection() {
 		return connection;
@@ -335,7 +332,7 @@ public class Database {
 	}
 	
 	public List<TopPlayer> GetTopPlayers (int min, int max) {
-		List<TopPlayer> topPlayer = new ArrayList<TopPlayer>();
+		List<TopPlayer> topPlayer = new ArrayList<>();
 		try {
 			PreparedStatement statement;
 			

@@ -22,7 +22,7 @@ public class RefAdmin extends CommandBase {
 		if (args.length > 3) {
 	        Utils.SendMessage(sender, core.config.tooManyArgs);
 	        return false;
-	    } else if (args.length >= 2 && args.length < 3) {
+	    } else if (args.length == 2) {
 	        Utils.SendMessage(sender, core.config.missingPlayer);
 	        return false;
 	    } else if (args.length < 2) {

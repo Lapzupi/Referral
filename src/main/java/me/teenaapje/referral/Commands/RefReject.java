@@ -43,7 +43,7 @@ public class RefReject extends CommandBase {
 		}
 		
 		// rmove from list
-		core.rInvites.RemoveFromList(((Player)sender).getName(), args[1]);
+		core.rInvites.RemoveFromList(sender.getName(), args[1]);
 				
 		Utils.SendMessage(sender, core.config.playerRej, reject);
 		

@@ -19,7 +19,7 @@ public class ReferralInvites {
 	
 	// init ReferralInvites
 	public ReferralInvites () {
-		referInvites = new ArrayList<Refer>();
+		referInvites = new ArrayList<>();
 	}
 	
 	// add and send invite
@@ -61,7 +61,7 @@ public class ReferralInvites {
 	public boolean RemoveFromList (String ref, String refer) {
 		Iterator<Refer> itr = referInvites.iterator();  
         while(itr.hasNext()){  
-        	Refer st=(Refer)itr.next();     
+        	Refer st= itr.next();
             if (st.ref.contains(ref) && st.refer.contains(refer)) {
             	itr.remove();
             	return true;
@@ -73,12 +73,10 @@ public class ReferralInvites {
 	
 	// is in list
 	public boolean IsInList (String ref,String refer) {
-	    Iterator<Refer> itr = referInvites.iterator();  
-        while(itr.hasNext()){  
-        	Refer st=(Refer)itr.next();              
+        for (Refer st : referInvites) {
             if (st.ref.toLowerCase().compareTo(ref.toLowerCase()) == 0 && st.refer.toLowerCase().compareTo(refer.toLowerCase()) == 0) {
-				return true;
-			}
+                return true;
+            }
         }     
         return false;
 	}

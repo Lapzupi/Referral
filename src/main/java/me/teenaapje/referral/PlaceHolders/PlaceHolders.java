@@ -5,6 +5,7 @@ import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 
 import me.clip.placeholderapi.expansion.PlaceholderExpansion;
+import org.jetbrains.annotations.NotNull;
 
 public class PlaceHolders extends PlaceholderExpansion{
 	/**
@@ -37,7 +38,7 @@ public class PlaceHolders extends PlaceholderExpansion{
      * @return The name of the author as a String.
      */
     @Override
-    public String getAuthor(){
+    public @NotNull String getAuthor(){
         return ReferralCore.core.getDescription().getAuthors().toString();
     }
 
@@ -51,25 +52,25 @@ public class PlaceHolders extends PlaceholderExpansion{
      * @return The identifier in {@code %<identifier>_<value>%} as String.
      */
     @Override
-    public String getIdentifier(){
+    public @NotNull String getIdentifier(){
         return ReferralCore.core.getDescription().getName().toLowerCase();
     }
 
     /**
      * This is the version of the expansion.
      * <br>You don't have to use numbers, since it is set as a String.
-     *
+     * <p>
      * For convienience do we return the version from the plugin.yml
      *
      * @return The version as a String.
      */
     @Override
-    public String getVersion(){
+    public @NotNull String getVersion(){
         return ReferralCore.core.getDescription().getVersion();
     }
 
     @Override
-    public String onPlaceholderRequest(Player p, String params) {
+    public String onPlaceholderRequest(Player p, @NotNull String params) {
         if(p == null) {
             return "";
         }
@@ -86,7 +87,7 @@ public class PlaceHolders extends PlaceholderExpansion{
     }
     
     @Override
-    public String onRequest(OfflinePlayer p, String params) {
+    public String onRequest(OfflinePlayer p, @NotNull String params) {
     	if(p == null) {
             return "";
         }

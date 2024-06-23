@@ -9,7 +9,7 @@ public class ReferralMilestone {
 	public List<Reward> rewards;
 
 	public ReferralMilestone() {
-		rewards = new ArrayList<Reward>();
+		rewards = new ArrayList<>();
 		LoadRewards();
 	}
 	
@@ -47,12 +47,3 @@ public class ReferralMilestone {
 	}
 }
 
-class Reward {
-    public int min;
-	public List<String> commands;
- 
-	public Reward (int min,	List<String> commands){
-        this.min = min;
-        this.commands = commands;
-    }
-}
