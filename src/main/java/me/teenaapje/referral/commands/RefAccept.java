@@ -1,4 +1,4 @@
-package me.teenaapje.referral.Commands;
+package me.teenaapje.referral.commands;
 
 import me.teenaapje.referral.utils.ConfigManager;
 import me.teenaapje.referral.utils.Utils;
@@ -76,8 +76,8 @@ public class RefAccept extends CommandBase {
 			    int playerReferrals = core.db.GetReferrals(playerUUID, playerName);
 			    
 			    // check if he has a new milestone reward
-			    if (core.milestone.HasAReward(playerLastReward, playerReferrals)) {
-			    	core.UseCommands(core.milestone.GetRewards(playerReferrals), player);
+			    if (core.milestone.hasReward(playerLastReward, playerReferrals)) {
+			    	core.UseCommands(core.milestone.getRewards(playerReferrals), player);
 				}	
 		    }
 		    core.rInvites.RemoveFromList(player.getName(), args[1]);

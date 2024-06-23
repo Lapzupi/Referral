@@ -1,7 +1,6 @@
-package me.teenaapje.referral.Commands;
+package me.teenaapje.referral.commands;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 import me.teenaapje.referral.ReferralCore;

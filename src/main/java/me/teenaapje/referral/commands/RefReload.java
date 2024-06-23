@@ -1,4 +1,4 @@
-package me.teenaapje.referral.Commands;
+package me.teenaapje.referral.commands;
 
 import me.teenaapje.referral.database.Database;
 import me.teenaapje.referral.ReferralInvites;
@@ -20,7 +20,7 @@ public class RefReload extends CommandBase {
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		// reload config
 		core.reloadConfig();
-		core.milestone.LoadRewards();
+		core.milestone.loadRewards();
 		
 		// reload things
 		core.db.CloseConnection();

@@ -1,4 +1,4 @@
-package me.teenaapje.referral.Commands;
+package me.teenaapje.referral.commands;
 
 import me.teenaapje.referral.ReferralCore;
 import me.teenaapje.referral.utils.Utils;

@@ -1,4 +1,4 @@
-package me.teenaapje.referral.Commands;
+package me.teenaapje.referral.commands;
 
 import java.util.List;
 

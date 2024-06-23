@@ -2,7 +2,7 @@ package me.teenaapje.referral;
 
 import java.util.List;
 
-import me.teenaapje.referral.Commands.CommandManager;
+import me.teenaapje.referral.commands.CommandManager;
 import me.teenaapje.referral.database.Database;
 import me.teenaapje.referral.placeholders.PlaceHolders;
 import me.teenaapje.referral.utils.ConfigManager;

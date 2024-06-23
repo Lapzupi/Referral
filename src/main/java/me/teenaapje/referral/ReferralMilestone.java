@@ -6,14 +6,14 @@ import java.util.List;
 public class ReferralMilestone {
 	ReferralCore core = ReferralCore.core;
 	
-	public List<Reward> rewards;
+	private List<Reward> rewards;
 
 	public ReferralMilestone() {
 		rewards = new ArrayList<>();
-		LoadRewards();
+		loadRewards();
 	}
 	
-	public void LoadRewards() {
+	public void loadRewards() {
 		rewards.clear();
 		
 		for (String key : core.config.rewards.getKeys(false)) {
@@ -25,18 +25,20 @@ public class ReferralMilestone {
 		}
 	}
 	
-	public boolean HasAReward(int lastReward, int referd) {
+	public boolean hasReward(int lastReward, int referd) {
 		for (Reward reward : rewards) {
 			if (reward.min == referd && lastReward < referd) {
 				return true;
-			} else if (reward.min == referd && lastReward >= referd) {
+			}
+
+			if (reward.min == referd) {
 				return false;
 			}
 		}		
 		return false;
 	}
 	
-	public List<String> GetRewards (int referTotal) {
+	public List<String> getRewards(int referTotal) {
 		for (Reward reward : rewards) {
 			if (reward.min == referTotal) {
 				return reward.commands;
@@ -44,6 +46,14 @@ public class ReferralMilestone {
 		}
 		// this should not be able to return null if so the HasAReward function isnt working correct
 		return null;
+	}
+
+	public List<Reward> getRewards() {
+		return rewards;
+	}
+
+	public void setRewards(List<Reward> rewards) {
+		this.rewards = rewards;
 	}
 }
 
