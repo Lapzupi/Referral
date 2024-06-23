@@ -1,7 +1,7 @@
 package me.teenaapje.referral.Commands;
 
 import me.teenaapje.referral.ReferralCore;
-import me.teenaapje.referral.Utils.Utils;
+import me.teenaapje.referral.utils.Utils;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;

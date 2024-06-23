@@ -1,4 +1,4 @@
-package me.teenaapje.referral.Utils;
+package me.teenaapje.referral.utils;
 
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;

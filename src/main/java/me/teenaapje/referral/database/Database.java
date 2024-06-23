@@ -1,4 +1,4 @@
-package me.teenaapje.referral.Database;
+package me.teenaapje.referral.database;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.logging.Level;
 
 import me.teenaapje.referral.ReferralCore;
-import me.teenaapje.referral.Utils.TopPlayer;
+import me.teenaapje.referral.utils.TopPlayer;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;

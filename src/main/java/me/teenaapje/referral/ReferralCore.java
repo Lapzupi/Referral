@@ -3,10 +3,10 @@ package me.teenaapje.referral;
 import java.util.List;
 
 import me.teenaapje.referral.Commands.CommandManager;
-import me.teenaapje.referral.Database.Database;
-import me.teenaapje.referral.PlaceHolders.PlaceHolders;
-import me.teenaapje.referral.Utils.ConfigManager;
-import me.teenaapje.referral.Utils.Utils;
+import me.teenaapje.referral.database.Database;
+import me.teenaapje.referral.placeholders.PlaceHolders;
+import me.teenaapje.referral.utils.ConfigManager;
+import me.teenaapje.referral.utils.Utils;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 

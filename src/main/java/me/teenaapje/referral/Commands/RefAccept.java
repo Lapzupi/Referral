@@ -1,7 +1,7 @@
 package me.teenaapje.referral.Commands;
 
-import me.teenaapje.referral.Utils.ConfigManager;
-import me.teenaapje.referral.Utils.Utils;
+import me.teenaapje.referral.utils.ConfigManager;
+import me.teenaapje.referral.utils.Utils;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;

@@ -16,11 +16,22 @@ repositories {
 }
 
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:1.20.4-R0.1-SNAPSHOT")
-    compileOnly("me.clip:placeholderapi:2.11.6")
+    compileOnly(libs.paper.api)
+    compileOnly(libs.placeholder.api)
 
 }
 
 java {
     toolchain.languageVersion.set(JavaLanguageVersion.of(21))
+}
+
+bukkit {
+    name = "Referral"
+    main = "me.teenaapje.referral.Referral"
+    version = "2.2.2"
+    description = "A fishing extension bringing an exciting new experience to fishing."
+    apiVersion = "1.20"
+    author = "Teena"
+    authors = listOf("Lapzupi Dev Team")
+    softDepend = listOf("PlaceholderAPI")
 }

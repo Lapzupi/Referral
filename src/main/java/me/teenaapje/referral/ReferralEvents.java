@@ -1,7 +1,7 @@
 package me.teenaapje.referral;
 
-import me.teenaapje.referral.Utils.ConfigManager;
-import me.teenaapje.referral.Utils.Utils;
+import me.teenaapje.referral.utils.ConfigManager;
+import me.teenaapje.referral.utils.Utils;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

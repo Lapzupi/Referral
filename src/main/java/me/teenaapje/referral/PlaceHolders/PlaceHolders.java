@@ -1,4 +1,4 @@
-package me.teenaapje.referral.PlaceHolders;
+package me.teenaapje.referral.placeholders;
 
 import me.teenaapje.referral.ReferralCore;
 import org.bukkit.OfflinePlayer;

@@ -3,7 +3,7 @@ package me.teenaapje.referral;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import me.teenaapje.referral.Utils.Utils;
+import me.teenaapje.referral.utils.Utils;
 import org.bukkit.entity.Player;
 
 import net.md_5.bungee.api.ChatColor;
