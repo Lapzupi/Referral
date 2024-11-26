@@ -1,12 +1,12 @@
 package me.teenaapje.referral.utils;
 
+import me.teenaapje.referral.ReferralCore;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.chat.ClickEvent;
 import net.md_5.bungee.api.chat.TextComponent;
 import me.clip.placeholderapi.PlaceholderAPI;
-import Me.Teenaapje.Referral.ReferralCore;
 
 public class Utils {	
 	// send message to player
@@ -25,7 +25,6 @@ public class Utils {
 			
 			return true;
 		} catch (Exception e) {
-			// TODO: handle exception?
 			return false;
 		}
 	}
@@ -86,10 +85,7 @@ public class Utils {
 	public static boolean IsConsole(CommandSender sender) {
 		return !(sender instanceof Player);
 	}
-	
-	public static void Console(String text) {
-		System.out.print(ChatColor.translateAlternateColorCodes('&', text));
-	}
+
 	
 	
 	

@@ -13,12 +13,27 @@ description = "A fishing extension bringing an exciting new experience to fishin
 repositories {
     maven("https://repo.papermc.io/repository/maven-public/")
     maven("https://repo.extendedclip.com/content/repositories/placeholderapi/")
+    maven("https://repo.aikar.co/content/groups/aikar/")
 }
 
 dependencies {
     compileOnly(libs.paper.api)
     compileOnly(libs.placeholder.api)
 
+    implementation(libs.commands)
+
+}
+
+
+tasks {
+    build {
+        dependsOn(shadowJar)
+    }
+
+    compileJava {
+        options.compilerArgs.add("-parameters")
+        options.isFork = true
+    }
 }
 
 java {

@@ -6,7 +6,6 @@ import me.teenaapje.referral.commands.CommandManager;
 import me.teenaapje.referral.database.Database;
 import me.teenaapje.referral.placeholders.PlaceHolders;
 import me.teenaapje.referral.utils.ConfigManager;
-import me.teenaapje.referral.utils.Utils;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -19,7 +18,8 @@ public class ReferralCore extends JavaPlugin{
 	public ReferralInvites rInvites;
 	public ReferralMilestone milestone;
 	public Database db;
-	
+
+	@Override
 	public void onEnable() {
 		saveDefaultConfig();
 		// set the plugin
@@ -35,14 +35,12 @@ public class ReferralCore extends JavaPlugin{
 		if (ConfigManager.placeholderAPIEnabled) {
 			new PlaceHolders().register();
 		}
-		
 		new CommandManager();
 		
 		new ReferralEvents();
-		
-		Utils.Console("[Referrel] Initialized - Enjoy");
 	}
-	
+
+	@Override
 	public void onDisable() {
 		db.CloseConnection();
 	}
